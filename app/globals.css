@@ -1,0 +1,366 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --accent-color: #f0f0f0;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+  --font-primary: 'Arial', sans-serif;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --radius: 0.5rem;
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  button {
+    cursor: pointer;
+    border: none;
+  }
+}
+
+@layer components {
+  .header {
+    @apply flex justify-between items-center py-4 px-8 border-b border-[var(--border-color)];
+  }
+
+  .logo {
+    @apply flex items-center;
+  }
+
+  .logo img {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .header-icons {
+    @apply flex gap-6 items-center;
+  }
+
+  .header-icon {
+    @apply text-xl cursor-pointer;
+  }
+
+  .language-selector {
+    @apply flex items-center gap-1 cursor-pointer;
+  }
+
+  .main-nav {
+    @apply flex justify-center py-4 border-b border-[var(--border-color)];
+  }
+
+  .nav-list {
+    @apply flex gap-8 list-none;
+  }
+
+  .nav-item {
+    @apply uppercase font-medium relative;
+  }
+
+  .nav-item a {
+    @apply py-1;
+  }
+
+  .hero {
+    @apply text-center py-12 mb-12;
+  }
+
+  .hero-title {
+    @apply text-4xl mb-4 uppercase;
+  }
+
+  .hero-text {
+    @apply max-w-3xl mx-auto text-gray-600;
+  }
+
+  .product-filters {
+    @apply flex justify-between items-center py-4 px-8 border-y border-[var(--border-color)];
+  }
+
+  .product-count {
+    @apply font-bold;
+  }
+
+  .filter-button {
+    @apply flex items-center gap-1 text-gray-600;
+  }
+
+  .filter-sidebar {
+    @apply w-64 p-6 border-r border-[var(--border-color)];
+  }
+
+  .filter-category {
+    @apply mb-6 pb-4 border-b border-[var(--border-color)];
+  }
+
+  .filter-title {
+    @apply flex justify-between items-center font-bold mb-2 cursor-pointer;
+  }
+
+  .product-container {
+    @apply flex;
+  }
+
+  .product-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 flex-grow;
+  }
+
+  .product-card {
+    @apply relative mb-8;
+  }
+
+  .product-tag {
+    @apply absolute top-2 left-2 bg-[var(--primary-color)] text-[var(--secondary-color)] px-2 py-1 text-xs uppercase;
+  }
+
+  .out-of-stock {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/80 px-4 py-2 font-bold;
+  }
+
+  .product-name {
+    @apply text-base mb-1 uppercase;
+  }
+
+  .product-actions {
+    @apply flex justify-between items-center mt-2;
+  }
+
+  .wishlist-button {
+    @apply bg-transparent border-none cursor-pointer text-xl;
+  }
+
+  .wishlist-button.active svg {
+    @apply fill-red-500;
+  }
+
+  .search-popup {
+    @apply fixed inset-0 bg-black/20 z-50 animate-fadeIn;
+  }
+
+  .search-popup-form {
+    @apply fixed top-16 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded-md p-4 z-50 flex gap-2 w-[90%] max-w-[600px] animate-slideDown;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideDown {
+    from { transform: translate(-50%, -20px); opacity: 0; }
+    to { transform: translate(-50%, 0); opacity: 1; }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  .animate-slideDown {
+    animation: slideDown 0.3s ease-out;
+  }
+
+  .footer {
+    @apply bg-[var(--primary-color)] text-[var(--secondary-color)] py-12;
+  }
+
+  .footer-top {
+    @apply grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 px-8;
+  }
+
+  .footer-section h3 {
+    @apply mb-4 uppercase;
+  }
+
+  .footer-links {
+    @apply list-none;
+  }
+
+  .footer-links li {
+    @apply mb-2;
+  }
+
+  .footer-links a {
+    @apply text-[var(--secondary-color)];
+  }
+
+  .newsletter-form {
+    @apply flex mt-4;
+  }
+
+  .newsletter-input {
+    @apply flex-grow p-4 border-none;
+  }
+
+  .newsletter-button {
+    @apply bg-transparent border border-[var(--secondary-color)] text-[var(--secondary-color)] px-6 py-4 uppercase;
+  }
+
+  .social-icons {
+    @apply flex gap-4 mt-4;
+  }
+
+  .social-icon {
+    @apply w-10 h-10 rounded-full bg-[var(--secondary-color)] flex items-center justify-center;
+  }
+
+  .payment-methods {
+    @apply flex gap-2 mt-4 flex-wrap;
+  }
+
+  .payment-icon {
+    @apply bg-[var(--secondary-color)] p-1 rounded w-[50px] h-[30px] flex items-center justify-center;
+  }
+
+  .footer-bottom {
+    @apply text-center pt-6 border-t border-white/20 text-sm px-8;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    @apply flex-col;
+  }
+
+  .filter-sidebar {
+    @apply w-full border-r-0 border-b border-[var(--border-color)];
+  }
+
+  .product-grid {
+    @apply grid-cols-2;
+  }
+
+  .footer-top {
+    @apply grid-cols-1;
+  }
+}
