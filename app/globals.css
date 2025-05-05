@@ -264,32 +264,6 @@
     @apply fill-red-500;
   }
 
-  .search-popup {
-    @apply fixed inset-0 bg-black/20 z-50 animate-fadeIn;
-  }
-
-  .search-popup-form {
-    @apply fixed top-16 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded-md p-4 z-50 flex gap-2 w-[90%] max-w-[600px] animate-slideDown;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  @keyframes slideDown {
-    from { transform: translate(-50%, -20px); opacity: 0; }
-    to { transform: translate(-50%, 0); opacity: 1; }
-  }
-
-  .animate-fadeIn {
-    animation: fadeIn 0.2s ease-out;
-  }
-
-  .animate-slideDown {
-    animation: slideDown 0.3s ease-out;
-  }
-
   .footer {
     @apply bg-[var(--primary-color)] text-[var(--secondary-color)] py-12;
   }

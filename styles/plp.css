@@ -21,55 +21,12 @@ h1.page-title {
   color: #111827;
 }
 
-/* Hero Section */
-.hero-section {
-  background-color: #F9FAFB;
-  padding: 48px 0;
-}
-
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #111827;
-  margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-  font-size: 1.125rem;
-  color: #6B7280;
-  max-width: 42rem;
-  line-height: 1.75;
-}
-
 .filters-sidebar {
   width: 280px;
   background-color: #F9FAFB;
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-/* Filter Sidebar Enhancements */
-.filter-options {
-  border-radius: 8px;
-  background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
-}
-
-.filter-group {
-  padding: 1rem;
-  border-bottom: 1px solid #E5E7EB;
-}
-
-.filter-group:last-child {
-  border-bottom: none;
-}
-
-.filter-label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #374151;
-  margin-bottom: 0.5rem;
 }
 
 .filters-sidebar h3 {
@@ -103,22 +60,6 @@ h1.page-title {
   background-color: #2563EB;
   color: #FFFFFF;
   font-weight: 700;
-}
-
-/* Filter Toggle Button */
-.filter-toggle {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #374151;
-  background: none;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.filter-toggle:hover {
-  color: #111827;
 }
 
 .price-range {
@@ -220,33 +161,6 @@ h1.page-title {
 
 .button.buy-now:hover {
   background-color: #1D4ED8;
-}
-
-/* Status Badges */
-.status-badge {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.status-badge-new {
-  background-color: #DBEAFE;
-  color: #1E40AF;
-}
-
-.status-badge-out {
-  background-color: #FEE2E2;
-  color: #991B1B;
-}
-
-/* Item Counter */
-.item-counter {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #6B7280;
 }
 
 /* Pagination styles */
